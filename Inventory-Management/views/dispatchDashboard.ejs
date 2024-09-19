@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/dispatchDashboardStyle.css">
+</head>
+<body>
+    <div id="main">
+        <div id="page1">
+            <div class="header">
+                <h1>Dispatch Dashboard</h1>
+                <a href="/logout">Log out</a>
+            </div>
+            <div class="product">                
+                <div class="product-details">
+                    <h4>Product Name: <%= product.productName %></h4>
+                    <h4>Quantity: <%= product.quantity %></h4>
+                    <h4>Date Arrival: <%= product.dateArrival %></h4>
+                    <h4>Status: <%= product.status %></h4>
+                </div>
+                <form action="/dispatch" method="POST">
+                    <label for="quantityDispatched">Quantity to Dispatch:</label>
+                    <input type="number" id="quantityDispatched" name="quantityDispatched" required>
+                    
+                    <button type="submit">Dispatch</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="/stylesheets/addProductStyle.css">
+</head>
+<body>
+    <div id="main">
+        <!-- Ensure form submits to the correct edit route with product ID -->
+        <form action="/product/edit/<%= product._id %>" method="POST">
+            <h1 class="title">Edit Product</h1>
+
+            <!-- Pre-fill the form with existing product data -->
+            <input name="productName" type="text" placeholder="Product Name" value="<%= product.productName %>">
+            <input name="date" type="date" placeholder="Date" value="<%= product.dateArrival.toISOString().split('T')[0] %>">
+            <input name="quantity" type="text" placeholder="Quantity" value="<%= product.quantity %>">
+
+            <input class="button" name="submit" type="submit" value="Save Changes">
+        </form>
+    </div>
+</body>
+</html>

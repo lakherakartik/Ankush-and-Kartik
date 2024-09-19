@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100vh;
+    width: 100vw;
+    background-color: lavender;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: gilroy;
+}
+#main form{
+    height: 60vh;
+    width: 40vw;
+    background-color: rgb(103, 212, 249);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+form input{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    font-size: 1.3vw;
+}
+form .title{
+    margin-bottom: 3vh;
+}
+form .button{
+    width: 30%;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
